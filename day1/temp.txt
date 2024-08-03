@@ -1,1 +1,12 @@
-
+1.1 JavaScript history
+1.2 ES6 and Babel
+destructuing
+rest
+spread 
+array methods
+1.3 Arrow functions and template literals
+1.4 Rest and spread operators
+1.5 Classes and Inheritance
+1.6 Static methods and properties
+1.7 Iterators and Iterables
+1.8 Generators

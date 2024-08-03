@@ -55,9 +55,38 @@
             return val > 100;
         })) 
         */
-        console.log(favnums.every(function(val){
+       /*  
+       console.log(favnums.every(function(val){
             return val > 1;
-        })) 
+       }))  
+        */
+       // 
+       /*
+       var gt50 = favnums.filter(function(val){
+         return val > 50;
+       });
+        
+        console.log("greater than 50",gt50);
+        
+        var lt50 = favnums.filter(function(val){
+            return val < 50;
+        });
+        
+        console.log("less than 50",lt50);
+    */
+
+    // Reduce
+    /*    
+    var total = favnums.reduce(function(initval, val, idx, arr){
+
+    },0) 
+    */
+    var total = favnums.reduce(function(initval, val, idx, arr){
+        return initval + val;
+    },0);
+
+    console.log(total);
+
     </script>
 </head>
 <body>
