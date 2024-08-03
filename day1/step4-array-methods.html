@@ -19,10 +19,45 @@
             console.log(idx, "function was called for ", val, arr);
         }; */
 
+       /*  
         favnums.forEach((val, idx, arr) => {
             console.log(idx, "function was called for ", val, arr);
-        });
+        }); 
+        */
 
+        /* 
+        favnums.forEach(function(...args){
+            // arguments is property of a function
+            // console.log(arguments.length);
+            // console.log(val, idx, arr);
+            // console.log(arguments[0], arguments[1], arguments[2]);
+            // console.log(args[0], args[1], args[2]);
+        });  
+        */
+
+        // console.log(favnums.forEach((val, idx, arr) => { return val })); 
+        // console.log(favnums.map((val, idx, arr) => { return val })); 
+        
+        /* 
+        var doubleFavNums = favnums.map((val, idx, arr) => { return val * 2 });
+        console.log(favnums);
+        console.log(doubleFavNums);
+        */
+
+        // predicate function
+        /* 
+        console.log(favnums.some(function(val){
+            return val > 1
+        })) 
+        */
+       /*  
+        console.log(favnums.some(function(val){
+            return val > 100;
+        })) 
+        */
+        console.log(favnums.every(function(val){
+            return val > 1;
+        })) 
     </script>
 </head>
 <body>
