@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+       /*  
+        var 
+        let 
+        const  
+        */
+       var data = {
+        title : "My Company",
+        product : "Shloka",
+        releasedate : new Date(),
+        price : 1001.50,
+        available : true,
+        city : "Bengaluru"
+       };
+
+       /*  
+       var tempData = data;
+       console.log(tempData.price);// 1001.50;
+       console.log(data.price);// 1001.50;
+       tempData.price = 2000;
+       console.log(tempData.price);// 2000
+       console.log(data.price);// ??? 
+       */
+       // destructuring
+        /*        
+       var datatitle = data.title;
+       var dataproduct = data.product;
+       var datareleasedate = data.releasedate;
+       var dataprice = data.price;
+       var dataavailable = data.available;
+       var datacity = data.city; 
+       */
+       /* 
+       var { 
+        title : datatitle,
+        product : dataproduct,
+        releasedate : datareleasedate,
+        price : dataprice,
+        available : dataavailable,
+        city : datacity
+       } = data; 
+       */
+      /* 
+      var { 
+       title : title,
+       product : product,
+       releasedate : releasedate,
+       price : price,
+       available : available,
+       city : city
+      } = data;  
+     */
+/*       var { 
+        title, 
+        product, 
+        releasedate, 
+        price, 
+        available, 
+        city
+      } = data; */ 
+
+      // var tempdata = {...data}; // shallow
+      var tempdata = JSON.parse(JSON.stringify(data)); // deep
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
