@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var favnums = [68,63,17,22,32,77,11,13,30,2,16,78,26,5];
+        /* 
+        function adder(){
+            return arguments[0] + arguments[1]
+        }; 
+        */
+       // rest
+        function adder(...nums){
+            var total = 0;
+            for(var i = 0; i < nums.length; i++){
+                total += nums[i]
+            }
+            return total;
+        };
+
+        console.log(adder(...favnums));//
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
