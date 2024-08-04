@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var favnums = [68,63,17,22,32,77,11,13,30,2,16,78,26,5];
+        /* 
+        look for all the values that are greater than 50 and find the sum of it
+        filter
+        reduce
+        */
+
+      /*   
+        var gt50 = favnums.filter(function(val){ return val > 50 });
+        var sumOfGt50 = gt50.reduce(function(initval,val){ return initval + val },0);
+        console.log(sumOfGt50); 
+        */
+        var sumOfGt50 = favnums
+                        .filter(function(val){ return val > 50 })
+                        .reduce(function(initval,val){ return initval + val },0);
+                        console.log(sumOfGt50);
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
