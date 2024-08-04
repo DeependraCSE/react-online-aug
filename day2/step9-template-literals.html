@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var avengers = [
+            {
+                title : "Ironman",
+                firstname : "Tony",
+                lastname : "Stark",
+                power : 6,
+                city : "New York"
+            },
+            {
+                title : "Hulk",
+                firstname : "Bruce",
+                lastname : "Benner",
+                power : 7,
+                city : "Indore"
+            }
+        ];
+        document.addEventListener("DOMContentLoaded", function(){
+            avengers.forEach(function(val, idx){
+                // document.getElementsByTagName("ul")[0].innerHTML += "<li>Title :"+val.title+"  | FullName : "+val.firstname+" "+val.lastname+" | Power : "+val.power+" | City : "+val.city+"</li>";
+                document.getElementsByTagName("ul")[0].innerHTML += `
+                <li>
+                    Title : ${val.title.toUpperCase()} | 
+                    FullName : ${val.firstname+" "+val.lastname } | 
+                    Power : ${val.power} | 
+                    City : ${val.city}
+                </li>`;
+            })
+        });
+    </script>
+</head>
+<body>
+    <ul></ul>
+</body>
+</html>
