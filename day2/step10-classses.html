@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /* 
+        class
+            properties
+                public
+                private
+                    getter
+                    setter
+                static
+            constructor
+                super()
+            methods
+                public
+                private
+                static
+        */
+        class Hero{
+            // public
+            title = "default title";
+            firstname = "default firstname";
+            lastname = "default lastname";
+            // private
+            #power = 0
+            // static
+            static version = 1001;
+            constructor(ntitle, nfname, nlname){
+                this.title = ntitle;
+                this.firstname = nfname;
+                this.lastname = nlname;
+            }
+            fullname(){
+                return this.firstname+" "+this.lastname;
+            }
+            #increasePower(){
+                this.#power+=1;
+            }
+            boostPower(){
+                this.#increasePower();
+            }
+            get power(){
+                return this.#power;
+            }
+            set power(npower){
+                this.#power = npower;
+            }
+        };
+        let hero = new Hero("Captain America","Steve","Rogers");
+        console.log(hero.title);
+        console.log(hero.fullname());
+        console.log(hero.fullname());
+        console.log(Hero.version);
+        console.log(hero.power);// getter
+        hero.boostPower();
+        console.log(hero.power);// getter
+        hero.boostPower();
+        console.log(hero.power);// getter
+        hero.boostPower();
+        console.log(hero.power);// getter
+        hero.boostPower();
+        console.log(hero.power);// getter
+        hero.power = 10 // setter
+        console.log(hero.power);// getter
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
