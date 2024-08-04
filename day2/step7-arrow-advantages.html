@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /* var cart = {
+            name : "The Cart",
+            version : 1001,
+            costPrice : function(){
+                return 100;
+            },
+            sellingPrice : function(){
+                var computeProfit = function(scope){
+                    return scope.costPrice() * 0.2;
+                };
+                console.log("inside the sellingprice ",this.name);// The Cart
+                return this.costPrice() + computeProfit(this);
+            }
+        }; */
+        // functions in javascript are objects
+        // properties
+            // arguments
+        // methods
+
+        var costPrice = function(){
+            return 1000;
+        }
+        var cart = {
+            name : "The Cart",
+            version : 1001,
+            costPrice : function(){
+                return 100;
+            },
+            sellingPrice : function(){
+                var computeProfit = () => {
+                    /* this.costPrice = function(){
+                        return 10;
+                    } */
+                    return this.costPrice() * 0.2;
+                };
+                // return this.costPrice() + computeProfit.call(this);
+                // return this.costPrice() + computeProfit.apply(this);
+                // return this.costPrice() + computeProfit.bind(this)();
+                return this.costPrice() + computeProfit();
+            }
+        };
+        console.log(cart.name);// The Cart
+        console.log(cart.version);// 1001
+        console.log(cart.costPrice());// 100
+        console.log(cart.sellingPrice());// 120
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
