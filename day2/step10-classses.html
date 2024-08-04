@@ -20,7 +20,13 @@
                 private
                 static
         */
-        class Hero{
+        class Person{
+            strength = "I can walk";
+            constructor(prop){
+                this.strength = prop;
+            }
+        }
+        class Hero extends Person{
             // public
             title = "default title";
             firstname = "default firstname";
@@ -29,7 +35,9 @@
             #power = 0
             // static
             static version = 1001;
-            constructor(ntitle, nfname, nlname){
+            constructor(ntitle, nfname, nlname, nstrength){
+                super(nstrength);
+                // console.log(super().strength)
                 this.title = ntitle;
                 this.firstname = nfname;
                 this.lastname = nlname;
@@ -50,7 +58,7 @@
                 this.#power = npower;
             }
         };
-        let hero = new Hero("Captain America","Steve","Rogers");
+        let hero = new Hero("Captain America","Steve","Rogers","I can run all day");
         console.log(hero.title);
         console.log(hero.fullname());
         console.log(hero.fullname());
@@ -66,6 +74,7 @@
         console.log(hero.power);// getter
         hero.power = 10 // setter
         console.log(hero.power);// getter
+        console.log(hero.strength);// I Can Walk
     </script>
 </head>
 <body>
