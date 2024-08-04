@@ -23,7 +23,8 @@
             lastname : "Benner",
             power : 7
         };
-        console.log(ironman.fullname("I am Ironman"));
+        
+        console.log( ironman.fullname("I am Ironman") );
         console.log( ironman.fullname.call(hulk,"I am Hulk part1") )
         console.log( ironman.fullname.apply(hulk,["I am Hulk part2"]) )
         console.log( ironman.fullname.bind(hulk)("I am Hulk part3") )

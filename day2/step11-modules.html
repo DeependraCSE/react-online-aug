@@ -6,11 +6,15 @@
     <title>Document</title>
     <!-- <script src="data.js"></script> -->
     <script type="module">
-        import { fnum } from "./data.js"
-        var sumOfGt50 = fnum
+        // import alias module
+        // import { fnum } from "./data.js"
+        // import default module
+        import vijay,{ odd } from "./data.js"
+        var sumOfGt50 = vijay
                         .filter(function(val){ return val > 50 })
                         .reduce(function(initval,val){ return initval + val },0);
          console.log(sumOfGt50);
+         console.log(odd);
     </script>
 </head>
 <body>
