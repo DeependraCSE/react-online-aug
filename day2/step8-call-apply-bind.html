@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var ironman = {
+            firstname : "Tony",
+            lastname : "Stark",
+            power : 6,
+            boostpower : function(){
+                return this.power * 2;
+            },
+            fullname : function(message){
+                return this.firstname+" "+this.lastname+" says '"+message+"'";
+            }
+        };
+        console.log(ironman.boostpower());
+
+        var hulk = {
+            firstname : "Bruce",
+            lastname : "Benner",
+            power : 7
+        };
+        console.log(ironman.fullname("I am Ironman"));
+        console.log( ironman.fullname.call(hulk,"I am Hulk part1") )
+        console.log( ironman.fullname.apply(hulk,["I am Hulk part2"]) )
+        console.log( ironman.fullname.bind(hulk)("I am Hulk part3") )
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
