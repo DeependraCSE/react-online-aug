@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- CDN Version
+    -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <!--  Local Version
+     <script src="lib/react-18.development.js"></script>
+    <script src="lib/react-dom.development.js"></script> 
+    -->
+    <style>
+       ol{
+            background-color: silver;
+            border: 1px solid darkslategray;
+            padding: 10px;
+            width: 200px;
+        } 
+        .box{
+            background-color: rgb(43, 43, 43);
+            color: antiquewhite;
+            font-family: sans-serif;
+            padding: 10px;
+            margin: 5px;
+            margin-left: 15px;
+        }
+    </style>
+    <script>
+        // virtual element
+        /* 
+        var list = document.createElement("ol");
+        var item1 = document.createElement("li");
+            item1.setAttribute("class", "box")
+            item1.textContent = "List Item 1";
+        var item2 = document.createElement("li");
+            item2.setAttribute("class", "box")
+            item2.textContent = "List Item 2";
+        var item3 = document.createElement("li");
+            item3.setAttribute("class", "box")
+            item3.textContent = "List Item 3";
+        list.appendChild(item1);
+        list.appendChild(item2);
+        list.appendChild(item3); 
+        console.log(list);
+        document.addEventListener("DOMContentLoaded", function(){
+            document.getElementById("root").appendChild(list);
+        })
+       */
+        // var list = React.createElement("ol","attributes","children",5+6,"some more text","5+5");
+       /*  
+       var list = React.createElement("ol",null,[
+            React.createElement("li",{key:"li1", className : "box"},"List Item 1"), 
+            React.createElement("li",{key:"li2", className : "box"},"List Item 2"), 
+            React.createElement("li",{key:"li3", className : "box"},"List Item 3")]);
+        document.addEventListener("DOMContentLoaded", function(){
+            ReactDOM.createRoot(document.getElementById("root")).render(list);
+        }); 
+        */
+    </script>
+    <script type="text/babel">
+        // React Element
+        /* let list = <ol>
+                        <li className="box">List Item 1</li>
+                        <li className="box">List Item 2</li>
+                        <li className="box">List Item 3</li>
+                        <li className="box">List Item 4</li>
+                        <li className="box">List Item 5</li>
+                    </ol> 
+        */
+       // React Component
+       // Class Component
+       /*  
+       class Comp extends React.Component{
+            vals = ["List Item 1", "List Item 2", "List Item 3", "List Item 4", "List Item 5"]
+            render(){
+                return <ol>{ this.vals.map((val, idx) => <li className="box" key={idx}>{ val }</li>) }</ol>
+            }
+       } 
+        */
+       // Function Component
+        let Comp  = function(){
+            let vals = ["List Item 1", "List Item 2", "List Item 3", "List Item 4", "List Item 5"];
+            return <ol>{  vals.map((val, idx) => <li className="box" key={idx}>{ val }</li>) } </ol>
+        };
+        ReactDOM.createRoot(document.getElementById("root")).render(<div> <Comp/> <Comp/> <Comp/> <Comp/> </div>);
+    </script>
+</head>
+<body>
+    <div id="root"></div>
+</body>
+</html>

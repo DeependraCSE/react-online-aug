@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       ol{
+            background-color: silver;
+            border: 1px solid darkslategray;
+            padding: 10px;
+            width: 200px;
+        } 
+        .box{
+            background-color: rgb(43, 43, 43);
+            color: antiquewhite;
+            font-family: sans-serif;
+            padding: 10px;
+            margin: 5px;
+            margin-left: 15px;
+        }
+    </style>
+    <script>
+        // virtual element
+        var list = document.createElement("ol");
+
+        var item1 = document.createElement("li");
+            item1.setAttribute("class", "box")
+            item1.textContent = "List Item 1";
+
+        var item2 = document.createElement("li");
+            item2.setAttribute("class", "box")
+            item2.textContent = "List Item 2";
+
+        var item3 = document.createElement("li");
+            item3.setAttribute("class", "box")
+            item3.textContent = "List Item 3";
+
+        list.appendChild(item1);
+        list.appendChild(item2);
+        list.appendChild(item3);
+
+        document.addEventListener("DOMContentLoaded", function(){
+            document.getElementById("root").appendChild(list);
+        })
+    </script>
+</head>
+<body>
+    <div id="root"></div>
+   <!--  
+    <button>default value</button>
+    <script>
+        document.getElementsByTagName("button")[0].textContent = "Click Me";
+    </script> 
+    -->
+</body>
+</html>

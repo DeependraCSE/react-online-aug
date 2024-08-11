@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var btn = document.createElement("button");
+        // btn.innerText = "Click Me";
+        btn.innerHTML += "<h1>React Training</h1>";
+        btn.innerHTML += "<hr/>";
+        btn.innerHTML += "<p>welcome to the workshop</p>";
+        btn.addEventListener("click", function(){
+            alert("you clicked the button")
+        });
+        document.addEventListener("DOMContentLoaded", function(){
+            document.getElementById("root").appendChild(btn);
+        })
+    </script>
+</head>
+<body>
+    <div id="root"></div>
+   <!--  
+    <button>default value</button>
+    <script>
+        document.getElementsByTagName("button")[0].textContent = "Click Me";
+    </script> 
+    -->
+</body>
+</html>
