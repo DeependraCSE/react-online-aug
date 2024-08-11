@@ -31,3 +31,21 @@ VSCode Icons Team
 Github link
 ==============
 https://github.com/reactfiles/react-online-aug
+
+
+// ==========================
+npx create-react-app steps
+cd steps
+npm start 
+
+// ==========================
+npm i create-react-app -g
+create-react-app steps 
+cd steps 
+npm start 
+
+// ==========================
+npm create vite@latest steps -- --template react     
+cd steps
+npm i
+npm run dev
